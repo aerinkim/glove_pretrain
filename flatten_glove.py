@@ -1,4 +1,5 @@
 def flatten_glove():
+
 	i=0
 	with open("flattened.glove.840d.300.txt", mode="w") as outfile: 
 		with open('../squad_vteam/data/glove.840B.300d.txt', encoding="utf8") as f:
