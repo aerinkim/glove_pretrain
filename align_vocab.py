@@ -4,7 +4,7 @@
 def create_new_vocab_txt(unigram_count_dictionary):
 	unigram_count_dictionary = create_unigram_count_dictionary() 
 	# We have to align the sequence of vocab.txt as same as glove.840d.300.txt
-	with open("new_vocab.txt", mode="w") as outfile: 
+	with open("new_vocab.txt", mode="w" , encoding="utf8") as outfile: 
 		with open('../squad_vteam/data/glove.840B.300d.txt', encoding="utf8") as f:
 			for line in f:
 				elems = line.split()
