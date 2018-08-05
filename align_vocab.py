@@ -8,21 +8,21 @@ def create_new_vocab_txt(unigram_count_dictionary):
 	unigram_count_dictionary = create_unigram_count_dictionary() 
 	# We have to align the sequence of vocab.txt as same as glove.840d.300.txt
 	with open("../GloVe/build/new_vocab.txt", mode="w" , encoding="utf8") as outfile: 
-		with open('../squad_vteam/data/glove.840B.300d.txt', encoding="utf8") as f:
-			i=0
-			j=0
+		with open('../v1_squad_vteam/data/glove.840B.300d.txt', encoding="utf8") as f:
+			i=0 # for loop index
+			j=0 # To prevent duplicate words we put integer at the end of the word. 
 			tokens_seen_before=set()
-
+			tokens_seen_before.add('')
 			for line in f:
 				elems = line.split()
 
 				if len(elems) != 301:
-					print (i, elems[:-300])
+					print ('This token is not one word!',i, elems[:-300])
 				
 				token = '_'.join(elems[0:-300])
 
 				if token in tokens_seen_before:
-					token = token+str(j)+'___'
+					token = token+'__'+str(j)+'__'
 					j+=1
 				else:
 					tokens_seen_before.add(token)
