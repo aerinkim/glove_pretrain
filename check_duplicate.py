@@ -22,4 +22,5 @@ def check_duplicate2():
 			else:
 				set_.add(token)
 
+print("#################################### Below are new_vocab.txt duplicates")
 check_duplicate()
