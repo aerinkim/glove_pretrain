@@ -1,5 +1,6 @@
 
-# compare the keys of the two vectors
+# Sanity Check: Comparing the keys of the two vectors.
+# It outputs "diff.txt" where you could locate the differences in two trained vectors.
 
 g_840_=[]
 g_wikipedia_=[]
@@ -15,15 +16,12 @@ def g_840():
 
 def g_wikipedia():
 	with open("g_wiki.txt", mode="w" , encoding="utf8") as outfile: 
-		with open('../GloVe/build/glove.Wikipedia.300d.txt', encoding="ISO-8859-1") as f:
+		with open('../GloVe/build/glove.Wikipedia4B.300d.txt', encoding="ISO-8859-1") as f:
 			for line in f:
 				elems = line.split()
 				token = ' '.join(elems[0:-300])
 				outfile.write("%s\n" %(token))
 				g_wikipedia_.append(token)
-
-
-
 
 
 g_840()
