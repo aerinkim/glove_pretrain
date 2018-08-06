@@ -1,6 +1,6 @@
 
 
-# Glove - Initialize the vectors with the pretrained-vectors
+# Training Glove with pre-trained vectors : Initialize the vectors with the pretrained vectors
 
 Do you want to adapt the word embedding to your own specific corpus? 
 
