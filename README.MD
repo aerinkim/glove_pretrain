@@ -13,11 +13,11 @@ One option is to train your own vectors by initializing it with Glove.840B.300d.
 To train your own GloVe vectors, first you'll need to prepare your corpus as a single text file with all words separated by one or more spaces or tabs. If your corpus has multiple documents, the documents (only) should be separated by new line characters. Cooccurrence contexts for words do not extend past newline characters. Once you create your corpus, you can train your own GloVe vectors following steps.
 
 #### 1) Remove duplicated words in the pretrained vector.
-In our case, Glove.840B.300d.txt. 
+In our case, the pretrained vector is Glove.840B.300d.txt. 
 
-For example, remove the " " word (whitespace as a word). line 142319. 
+Specifically for this example, remove the " " word (whitespace as a word): line 142319. 
 
-Remove crazy (330 squares) characters. line 138701, 140649, 141505, 849063. 
+Remove crazy (330 squares) characters: line 138701, 140649, 141505, 849063. 
 
 #### 2) flatten_glove.py
 Constructs a 1-dimensional array to feed into glove.C code.
