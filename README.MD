@@ -1,10 +1,10 @@
 
 
-# Training Glove with pre-trained vectors : Initialize the vectors with the pretrained vectors
+# Training Glove with pre-trained vectors 
 
 Do you want to adapt the word embedding to your own specific corpus? 
 
-One option is to train your own vector on top of the Glove.840B.300d.txt. 
+One option is to train your own vectors by initializing it with Glove.840B.300d.txt . 
 
 840B means that vector is trained on 840 Billion(!) tokens already. Given that the whole Wikipedia corpus consists of only 4 Billion tokens, you *don't* want to train your own vector with a tiny corpus and let go of the pretrained vector with 840 Billion tokens which is already available. 
 
