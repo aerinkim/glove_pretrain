@@ -21,6 +21,11 @@ Remove crazy (330 squares) characters: line 138701, 140649, 141505, 849063.
 
 #### 2) Build unigram count by running vocab_count.c
 Constructs unigram counts from a corpus and the output vocab.txt will be used in step 4. 
+```
+./vocab_count  -verbose 2 -max-vocab 0 -min-count 10 <  ~/Desktop/tokenizer_wrapper/tokened.txt  > vocab.txt 
+```
+
+
 
 #### 3) flatten_glove.py
 Constructs a 1-dimensional array to feed into glove.C code.
